@@ -1,0 +1,19 @@
+in-progress:
+  label: In Progress
+  color: amber
+
+completed:
+  label: Completed
+  color: green
+
+on-hold:
+  label: On Hold
+  color: gray
+
+planned:
+  label: Planned
+  color: blue
+
+blocked:
+  label: Blocked
+  color: red 

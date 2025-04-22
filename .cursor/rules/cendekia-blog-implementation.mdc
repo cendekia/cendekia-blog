@@ -5,6 +5,8 @@ alwaysApply: true
 ---
 # Cendekia Blog Implementation Plan
 
+Please follow my instruction step using this plan prompt: [planner.md](mdc:planner.md)
+
 ## Project Setup and Repository Configuration
 
 - Initialize Jekyll project with base configuration
