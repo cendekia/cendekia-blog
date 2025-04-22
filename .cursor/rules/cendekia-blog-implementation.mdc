@@ -1,0 +1,58 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Cendekia Blog Implementation Plan
+
+## Project Setup and Repository Configuration
+
+- Initialize Jekyll project with base configuration
+- Configure GitHub repository and GitHub Actions for deployment
+- Set up custom domain (cendekiapp.com)
+
+## Design System Implementation
+
+- Integrate Tailwind CSS with Jekyll (dark mode only)
+- Create base layout and style components
+- Implement core UI components inspired by Shadcn UI
+
+## Core Site Structure
+
+- Create main navigation and pages (Home, About, Projects, Contact)
+- Implement homepage with roadmap/timeline
+- Configure site-wide SEO and metadata
+
+## Project Pages and Timeline Implementation
+
+- Create project collection and data structure
+- Implement project overview template
+- Create timeline visualization component
+- Implement status indicators system
+
+## Blog Post System
+
+- Configure blog post collection and URL structure
+- Implement project introduction template
+- Create weekly update template
+- Design technical challenge template
+- Set up code snippet highlighting
+
+## Advanced Features
+
+- Implement search functionality
+- Add social sharing buttons
+- Create system for embedding interactive demos
+- Implement project pagination
+
+## Mobile Responsiveness and Testing
+
+- Ensure responsive design for all components
+- Optimize timeline for mobile devices
+- Perform cross-browser testing and fix compatibility issues
+
+## Final Setup and Launch
+
+- Optimize site for SEO and performance
+- Create sample content demonstrating features
+- Write documentation and content creation guide
