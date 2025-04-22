@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for dark mode */
+@layer base {
+  html {
+    @apply bg-dark-bg text-dark-text-primary;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+
+  /* Heading styles */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-dark-text-primary;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  /* Link styles */
+  a {
+    @apply text-dark-primary hover:text-dark-secondary transition-colors;
+  }
+
+  /* Code styles */
+  pre, code {
+    @apply bg-dark-surface rounded px-1 py-0.5;
+  }
+
+  pre code {
+    @apply bg-transparent p-0;
+  }
+} 

@@ -1,0 +1,7 @@
+<button 
+  class="px-4 py-2 rounded-md text-dark-text-primary bg-dark-primary hover:bg-dark-primary/80 transition-colors focus:outline-none focus:ring-2 focus:ring-dark-secondary {% if include.class %}{{ include.class }}{% endif %}"
+  {% if include.type %}type="{{ include.type }}"{% else %}type="button"{% endif %}
+  {% if include.id %}id="{{ include.id }}"{% endif %}
+>
+  {{ include.text }}
+</button> 

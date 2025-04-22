@@ -2,7 +2,7 @@
 
 ## Project Setup and Repository Configuration
 
-- [ ] Step 1: Initialize Jekyll Project and Base Configuration
+- [x] Step 1: Initialize Jekyll Project and Base Configuration
     
     - **Task**: Set up the basic Jekyll project structure with necessary configuration files, install required dependencies, and configure the project for GitHub Pages.
     - **Files**:
@@ -11,13 +11,13 @@
         - `.gitignore`: Standard Jekyll gitignore file
         - `README.md`: Project documentation
     - **User Instructions**: Install Ruby and Jekyll on your development machine if not already installed.
-- [ ] Step 2: Configure GitHub Repository and GitHub Actions
+- [x] Step 2: Configure GitHub Repository and GitHub Actions
     
     - **Task**: Set up GitHub repository and create GitHub Actions workflow for automated deployment to GitHub Pages.
     - **Files**:
         - `.github/workflows/jekyll-gh-pages.yml`: GitHub Actions workflow configuration
     - **User Instructions**: Create a new GitHub repository named "cendekiapp.com" and push the initialized project to it. Enable GitHub Pages in the repository settings.
-- [ ] Step 3: Custom Domain Setup
+- [x] Step 3: Custom Domain Setup
     
     - **Task**: Configure the custom domain cendekiapp.com to work with GitHub Pages.
     - **Files**:
@@ -28,7 +28,7 @@
 
 ## Design System Implementation
 
-- [ ] Step 4: Integrate Tailwind CSS with Jekyll
+- [x] Step 4: Integrate Tailwind CSS with Jekyll
     
     - **Task**: Set up Tailwind CSS in the Jekyll project for styling and configure it for dark mode only.
     - **Files**:

@@ -1,0 +1,13 @@
+<span class="px-2 py-1 text-xs inline-block rounded-full 
+{% if include.type == 'primary' %}
+  bg-dark-primary text-dark-text-primary
+{% elsif include.type == 'secondary' %}
+  bg-dark-secondary text-dark-bg
+{% elsif include.type == 'error' %}
+  bg-dark-error text-dark-text-primary
+{% else %}
+  bg-dark-surface text-dark-text-secondary
+{% endif %}
+{% if include.class %} {{ include.class }}{% endif %}">
+  {{ include.text }}
+</span> 

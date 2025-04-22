@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  {% include head.html %}
+  <body class="bg-dark-bg text-dark-text-primary min-h-screen">
+    <header class="py-6 bg-dark-surface">
+      <div class="container mx-auto px-4">
+        <nav class="flex justify-between items-center">
+          <a href="{{ '/' | relative_url }}" class="text-xl font-bold text-dark-primary">{{ site.title }}</a>
+          <div class="space-x-4">
+            <a href="{{ '/about' | relative_url }}" class="text-dark-text-secondary hover:text-dark-primary">About</a>
+            <a href="{{ '/contact' | relative_url }}" class="text-dark-text-secondary hover:text-dark-primary">Contact</a>
+            <a href="{{ '/projects' | relative_url }}" class="text-dark-text-secondary hover:text-dark-primary">Projects</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      {{ content }}
+    </main>
+
+    <footer class="py-6 bg-dark-surface mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <p class="text-dark-text-secondary">© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+          <a href="mailto:{{ site.email }}" class="text-dark-primary hover:text-dark-secondary">{{ site.email }}</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html> 
