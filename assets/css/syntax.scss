@@ -1,59 +1,60 @@
 // Syntax highlighting styles for dark mode
-// Based on the "One Dark" syntax theme
+// Based on GitHub dark theme
 
 .highlight {
-  background: #282c34;
-  color: #abb2bf;
-  border-radius: 0 0 0.5rem 0.5rem;
+  background: #1F2933;
+  color: #C9D1D9;
+  border-radius: 6px;
   padding: 1rem;
   overflow-x: auto;
+  border: 1px solid #30363D;
 
   .c, .cm, .cp, .c1, .cs {
     // Comments
-    color: #5c6370;
+    color: #8B949E;
     font-style: italic;
   }
 
   .err {
     // Error
-    color: #f44747;
+    color: #F85149;
   }
 
   .k, .kc, .kd, .kn, .kp, .kr, .kt {
     // Keywords
-    color: #c678dd;
+    color: #FF7B72;
   }
 
   .o, .ow {
     // Operators
-    color: #56b6c2;
+    color: #79C0FF;
   }
 
   .p {
     // Punctuation
-    color: #abb2bf;
+    color: #C9D1D9;
   }
 
   .gd {
     // Deleted
-    color: #e06c75;
+    color: #F85149;
   }
 
   .gi {
     // Inserted
-    color: #98c379;
+    color: #3FB950;
   }
 
   .gd .x {
     // Deleted specific
-    color: #e06c75;
-    background-color: #4b2d36;
+    color: #F85149;
+    background-color: #4a2426;
   }
 
   .gi .x {
     // Inserted specific
-    color: #98c379;
-    background-color: #2f3d2d;
+    color: #3FB950;
+    background-color: #2a3b2d;
   }
 
   .ge {
@@ -68,67 +69,67 @@
 
   .gu {
     // Generic subheading
-    color: #3e999f;
+    color: #58A6FF;
   }
 
   .gt {
     // Generic traceback
-    color: #e06c75;
+    color: #F85149;
   }
 
   .m, .mf, .mh, .mi, .mo, .il {
     // Numbers
-    color: #d19a66;
+    color: #79C0FF;
   }
 
   .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
     // Strings
-    color: #98c379;
+    color: #A5D6FF;
   }
 
   .na, .nc, .nd, .ne, .nf, .nx {
     // Names
-    color: #61afef;
+    color: #58A6FF;
   }
 
   .nb, .bp {
     // Built-in
-    color: #e06c75;
+    color: #FF7B72;
   }
 
   .nl {
     // Labels
-    color: #abb2bf;
+    color: #C9D1D9;
   }
 
   .no, .ni, .nv, .vc, .vg, .vi {
     // Variables
-    color: #e5c07b;
+    color: #FFA657;
   }
 
   .nt {
     // Tags
-    color: #e06c75;
+    color: #7EE787;
   }
 
   .nn {
     // Namespace
-    color: #e5c07b;
+    color: #FFA657;
   }
 
   .w {
     // Whitespace
-    color: #abb2bf;
+    color: #C9D1D9;
   }
 }
 
 // Line numbers
 .highlight .lineno {
-  color: #636d83;
+  color: #8B949E;
   display: inline-block;
   padding: 0 0.5em 0 0;
   margin-right: 0.5em;
-  border-right: 1px solid #3e4451;
+  border-right: 1px solid #30363D;
 }
 
 // Code block base styles
@@ -138,9 +139,10 @@ pre.highlight {
   padding: 1rem;
   font-size: 0.875rem;
   line-height: 1.6;
-  background-color: #282c34;
-  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #1F2933;
+  border-radius: 6px;
   overflow-x: auto;
+  border: 1px solid #30363D;
 }
 
 // Inline code
@@ -148,6 +150,6 @@ code.highlighter-rouge {
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
-  background-color: #282c34;
+  background-color: #1F2933;
   border-radius: 3px;
 } 

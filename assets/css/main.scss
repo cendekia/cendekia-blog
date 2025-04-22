@@ -32,16 +32,21 @@
 
   /* Link styles */
   a {
-    @apply text-dark-primary hover:text-dark-secondary transition-colors;
+    @apply text-dark-primary hover:opacity-80 transition-opacity;
   }
 
   /* Code styles */
   pre, code {
-    @apply bg-dark-surface rounded px-1 py-0.5;
+    @apply bg-dark-code rounded px-1 py-0.5;
   }
 
   pre code {
     @apply bg-transparent p-0;
+  }
+
+  /* Border styles */
+  hr, th, td {
+    @apply border-dark-border;
   }
 }
 
@@ -57,7 +62,20 @@
 }
 
 .blog-post {
-  @apply bg-dark-surface rounded-lg p-6 hover:shadow-lg transition-shadow duration-300;
+  @apply bg-dark-surface rounded-lg p-6 border border-dark-border hover:shadow-lg transition-shadow duration-300;
+}
+
+/* Status indicators */
+.status-success {
+  @apply text-dark-success;
+}
+
+.status-warning {
+  @apply text-dark-warning;
+}
+
+.status-error {
+  @apply text-dark-error;
 }
 
 /* Animation utilities */

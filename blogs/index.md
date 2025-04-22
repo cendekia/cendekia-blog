@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Blogs
 permalink: /blogs/
 description: Articles documenting project development, technical challenges, and lessons learned.
 ---

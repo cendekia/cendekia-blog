@@ -8,7 +8,7 @@
     
     &:before {
       content: '';
-      @apply absolute top-0 left-0 h-full border-l-2 border-dark-primary/30;
+      @apply absolute top-0 left-0 h-full border-l-2 border-dark-border;
     }
   }
   
@@ -40,13 +40,13 @@
   /* Completed vs pending styles */
   .completed {
     .timeline-item-content {
-      @apply border-l-4 border-dark-secondary;
+      @apply border-l-4 border-dark-success;
     }
   }
   
   .pending {
     .timeline-item-content {
-      @apply border-l-4 border-dark-primary/50;
+      @apply border-l-4 border-dark-warning/70;
     }
   }
   

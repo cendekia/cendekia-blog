@@ -16,14 +16,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-bg': '#121212',
-        'dark-surface': '#1E1E1E',
-        'dark-primary': '#BB86FC',
-        'dark-secondary': '#03DAC6',
-        'dark-error': '#CF6679',
-        'dark-text-primary': '#FFFFFF',
-        'dark-text-secondary': 'rgba(255, 255, 255, 0.7)',
-        'dark-text-disabled': 'rgba(255, 255, 255, 0.5)',
+        'dark-bg': '#0D1117',
+        'dark-surface': '#161B22',
+        'dark-primary': '#58A6FF',
+        'dark-secondary': '#58A6FF',
+        'dark-success': '#3FB950',
+        'dark-warning': '#D29922',
+        'dark-error': '#F85149',
+        'dark-text-primary': '#C9D1D9',
+        'dark-text-secondary': '#8B949E',
+        'dark-text-disabled': 'rgba(139, 148, 158, 0.5)',
+        'dark-border': '#30363D',
+        'dark-code': '#1F2933',
       },
       typography: (theme) => ({
         dark: {
@@ -48,10 +52,37 @@ module.exports = {
               color: theme('colors.dark-primary'),
             },
             code: {
-              color: theme('colors.dark-secondary'),
+              color: theme('colors.dark-primary'),
+              backgroundColor: theme('colors.dark-code'),
             },
             pre: {
-              backgroundColor: theme('colors.dark-surface'),
+              backgroundColor: theme('colors.dark-code'),
+            },
+            strong: {
+              color: theme('colors.dark-text-primary'),
+            },
+            blockquote: {
+              color: theme('colors.dark-text-secondary'),
+              borderLeftColor: theme('colors.dark-border'),
+            },
+            hr: {
+              borderColor: theme('colors.dark-border'),
+            },
+            ol: {
+              color: theme('colors.dark-text-secondary'),
+            },
+            ul: {
+              color: theme('colors.dark-text-secondary'),
+            },
+            li: {
+              color: theme('colors.dark-text-secondary'),
+            },
+            th: {
+              color: theme('colors.dark-text-primary'),
+              borderColor: theme('colors.dark-border'),
+            },
+            td: {
+              borderColor: theme('colors.dark-border'),
             },
           },
         },

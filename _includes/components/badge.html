@@ -2,11 +2,15 @@
 {% if include.type == 'primary' %}
   bg-dark-primary text-dark-text-primary
 {% elsif include.type == 'secondary' %}
-  bg-dark-secondary text-dark-bg
+  bg-dark-primary/20 text-dark-primary
+{% elsif include.type == 'success' %}
+  bg-dark-success text-dark-text-primary
+{% elsif include.type == 'warning' %}
+  bg-dark-warning text-dark-text-primary
 {% elsif include.type == 'error' %}
   bg-dark-error text-dark-text-primary
 {% else %}
-  bg-dark-surface text-dark-text-secondary
+  bg-dark-surface text-dark-text-secondary border border-dark-border
 {% endif %}
 {% if include.class %} {{ include.class }}{% endif %}">
   {{ include.text }}

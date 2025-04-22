@@ -1,4 +1,4 @@
-<div class="bg-dark-surface rounded-lg shadow-lg overflow-hidden {% if include.class %}{{ include.class }}{% endif %}">
+<div class="bg-dark-surface rounded-lg shadow-md border border-dark-border overflow-hidden {% if include.class %}{{ include.class }}{% endif %}">
   {% if include.image %}
   <div class="w-full h-48 overflow-hidden">
     <img src="{{ include.image }}" alt="{{ include.title }}" class="w-full h-full object-cover">
@@ -12,7 +12,7 @@
     <p class="text-dark-text-secondary mb-4">{{ include.description }}</p>
     {% endif %}
     {% if include.link and include.link_text %}
-    <a href="{{ include.link }}" class="inline-flex items-center text-dark-primary hover:text-dark-secondary">
+    <a href="{{ include.link }}" class="inline-flex items-center text-dark-primary hover:opacity-80 transition-opacity">
       {{ include.link_text }}
       <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
