@@ -1,0 +1,28 @@
+/* Layout Component Styles */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-12 md:py-16;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold text-dark-primary mb-6;
+}
+
+.section-description {
+  @apply text-dark-text-secondary mb-10 max-w-3xl;
+}
+
+.page-header {
+  @apply mb-10;
+
+  .page-title {
+    @apply text-3xl md:text-4xl font-bold text-dark-primary mb-4;
+  }
+
+  .page-description {
+    @apply text-xl text-dark-text-secondary;
+  }
+} 

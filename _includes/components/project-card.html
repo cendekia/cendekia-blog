@@ -1,0 +1,54 @@
+<div class="project-card bg-dark-surface rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow {% if include.class %}{{ include.class }}{% endif %}">
+  <!-- Project image (if provided) -->
+  {% if include.image %}
+  <div class="w-full h-48 overflow-hidden">
+    <img src="{{ include.image }}" alt="{{ include.title }}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+  </div>
+  {% endif %}
+  
+  <div class="p-6">
+    <!-- Project status badge -->
+    {% if include.status %}
+    <div class="mb-3">
+      {% if include.status == 'completed' %}
+        {% include components/badge.html text="Completed" type="secondary" %}
+      {% elsif include.status == 'in-progress' %}
+        {% include components/badge.html text="In Progress" type="primary" %}
+      {% elsif include.status == 'planned' %}
+        {% include components/badge.html text="Planned" %}
+      {% endif %}
+    </div>
+    {% endif %}
+    
+    <!-- Project title -->
+    <h3 class="text-xl font-bold mb-2 text-dark-text-primary">{{ include.title }}</h3>
+    
+    <!-- Project description -->
+    {% if include.description %}
+    <p class="text-dark-text-secondary mb-4">{{ include.description }}</p>
+    {% endif %}
+    
+    <!-- Project technologies -->
+    {% if include.technologies %}
+    <div class="mb-4">
+      <div class="flex flex-wrap gap-2">
+        {% for tech in include.technologies %}
+        <span class="px-2 py-1 text-xs bg-dark-bg rounded-full text-dark-text-secondary">{{ tech }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    
+    <!-- Project link -->
+    {% if include.link and include.link_text %}
+    <div class="mt-4">
+      <a href="{{ include.link }}" class="inline-flex items-center text-dark-primary hover:text-dark-secondary transition-colors">
+        {{ include.link_text }}
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</div> 

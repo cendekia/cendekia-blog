@@ -4,8 +4,6 @@ title: Projects
 permalink: /projects/
 ---
 
-# Projects
-
 Below is a collection of my ongoing and completed projects. Each project includes a timeline of development, technical challenges, and key milestones.
 
 {% assign sorted_projects = site.projects | sort: 'start_date' | reverse %}

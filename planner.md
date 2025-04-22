@@ -37,7 +37,7 @@
         - `postcss.config.js`: PostCSS configuration
         - `assets/css/main.scss`: Main stylesheet entry point
     - **User Instructions**: Run `npm install` to install Node.js dependencies.
-- [ ] Step 5: Create Base Layout and Style Components
+- [x] Step 5: Create Base Layout and Style Components
     
     - **Task**: Implement the base layout template and core style components in a dark mode minimalist design.
     - **Files**:
@@ -46,7 +46,7 @@
         - `_includes/header.html`: Site header with navigation
         - `_includes/footer.html`: Site footer with about section and social links
         - `assets/css/components`: Directory for component styles
-- [ ] Step 6: Implement Core UI Components
+- [x] Step 6: Implement Core UI Components
     
     - **Task**: Create reusable UI components inspired by Shadcn UI that will be used throughout the site.
     - **Files**:
