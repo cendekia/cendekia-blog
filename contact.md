@@ -19,7 +19,7 @@ I'd love to hear from you! Whether you have questions about a project, want to d
 Follow along with my development journey:
 
 - Subscribe to the [RSS feed](/feed.xml) to get notified of new posts
-- Star the [GitHub repository](https://github.com/cendekiapp/cendekiapp.com) to see the code behind this site
+- Star the [GitHub repository](https://github.com/cendekia/cendekia-blog) to see the code behind this site
 - Follow me on social media for updates and discussions
 
 Thank you for visiting! 

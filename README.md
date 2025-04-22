@@ -23,7 +23,7 @@ This site is built using Jekyll and hosted on GitHub Pages with a custom domain 
 
 1. Clone this repository
    ```
-   git clone https://github.com/yourusername/cendekiapp.com.git
+   git clone https://github.com/cendekia/cendekia-blog.git
    cd cendekiapp.com
    ```
 
@@ -44,6 +44,31 @@ This site is built using Jekyll and hosted on GitHub Pages with a custom domain 
 
 5. View the site at [http://localhost:4000](http://localhost:4000)
 
+## GitHub Pages Setup
+
+This site is configured to deploy automatically to GitHub Pages using GitHub Actions. To set up your own deployment:
+
+1. Create a new GitHub repository named `cendekiapp.com` (or your preferred name)
+
+2. Push this code to your repository:
+   ```
+   git remote add origin https://github.com/yourusername/cendekiapp.com.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+3. In your GitHub repository settings:
+   - Go to Pages > Build and deployment
+   - Set Source to "GitHub Actions"
+   - The workflow file at `.github/workflows/jekyll-gh-pages.yml` will handle the deployment
+
+4. (Optional) For a custom domain:
+   - In your repository settings, go to Pages > Custom domain
+   - Enter your domain name (e.g., `cendekiapp.com`)
+   - Update DNS records with your domain registrar:
+     - A record: point to GitHub Pages IP addresses
+     - CNAME record: for www subdomain, point to your GitHub Pages site
+
 ## Project Structure
 
 - `_config.yml`: Site configuration
@@ -55,8 +80,8 @@ This site is built using Jekyll and hosted on GitHub Pages with a custom domain 
 
 ## Deployment
 
-The site is automatically deployed via GitHub Pages when changes are pushed to the main branch.
+The site is automatically deployed via GitHub Actions when changes are pushed to the main branch.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 

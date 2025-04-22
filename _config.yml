@@ -33,6 +33,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Collections
 collections:
@@ -82,3 +83,8 @@ exclude:
   - postcss.config.js
   - package.json
   - package-lock.json
+  - docs/
+  - .github/
+  - LICENSE
+  - CONTRIBUTING.md
+  - .nojekyll
