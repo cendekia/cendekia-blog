@@ -39,7 +39,7 @@
     {% if include.categories.size > 0 %}
       <div class="w-full mt-2 md:w-auto md:mt-0">
         {% for category in include.categories %}
-          <a href="{{ site.baseurl }}/blog/category/{{ category | slugify }}" class="px-2 py-1 text-xs bg-dark-surface rounded-full text-dark-text-secondary hover:text-dark-primary transition-colors mr-1">{{ category }}</a>
+          <a href="{{ site.baseurl }}/blogs/category/{{ category | slugify }}" class="px-2 py-1 text-xs bg-dark-surface rounded-full text-dark-text-secondary hover:text-dark-primary transition-colors mr-1">{{ category }}</a>
         {% endfor %}
       </div>
     {% endif %}

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
+permalink: /blogs/
 description: Articles documenting project development, technical challenges, and lessons learned.
 ---
 

@@ -23,10 +23,11 @@ email: hello@cendekiapp.com
 description: >- # this means to ignore newlines until "baseurl:"
   A developer's journal documenting the process of building projects from scratch,
   sharing technical challenges, and tracking progress through a visual timeline.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blogs
 url: "https://cendekiapp.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cendekiapp
-github_username: cendekiapp
+github_username: cendekia
+linkedin_username: cendekiapp
 
 # Build settings
 theme: minima
@@ -48,7 +49,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: /blog/:year/:month/:day/:title/
+      permalink: /blogs/:year/:month/:day/:title/
   - scope:
       path: ""
       type: "projects"
