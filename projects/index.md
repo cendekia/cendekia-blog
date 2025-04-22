@@ -1,31 +1,44 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
+description: A collection of software development projects documented from start to finish.
 ---
 
-Below is a collection of my ongoing and completed projects. Each project includes a timeline of development, technical challenges, and key milestones.
-
-{% assign sorted_projects = site.projects | sort: 'start_date' | reverse %}
-
-<div class="projects-grid">
-  {% for project in sorted_projects %}
-    <div class="project-card">
-      <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
-      <p>{{ project.description }}</p>
-      <div class="project-meta">
-        <span class="project-date">Started: {{ project.start_date | date: "%B %Y" }}</span>
-        <span class="project-status {{ project.status }}">{{ site.data.statuses[project.status].label }}</span>
-      </div>
-      <div class="project-technologies">
-        {% for tech in project.technologies %}
-          <span class="tech-badge">{{ tech }}</span>
-        {% endfor %}
-      </div>
+<div class="projects-page">
+  <div class="container mx-auto px-4 py-12">
+    <!-- Page Header -->
+    <header class="max-w-3xl mb-12">
+      <h1 class="text-4xl font-bold text-dark-primary mb-4">{{ page.title }}</h1>
+      <p class="text-xl text-dark-text-secondary">{{ page.description }}</p>
+    </header>
+    
+    <!-- Projects List -->
+    <div class="project-grid">
+      {% assign projects = site.projects | sort: 'position' %}
+      {% if projects.size > 0 %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {% for project in projects %}
+            {% include components/project-card.html 
+              title=project.title 
+              description=project.description 
+              status=project.status 
+              link=project.url 
+              link_text="View Project"
+              technologies=project.technologies
+              image=project.image
+            %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="bg-dark-surface rounded-lg p-8 text-center">
+          <p class="text-dark-text-secondary mb-4">No projects available yet. Check back soon!</p>
+          
+          <p class="text-dark-text-secondary text-sm">
+            Projects will be added as they are developed. Each project will include a timeline, technical challenges, and lessons learned.
+          </p>
+        </div>
+      {% endif %}
     </div>
-  {% endfor %}
-</div>
-
-{% if sorted_projects.size == 0 %}
-<p>No projects available yet. Check back soon!</p>
-{% endif %} 
+  </div>
+</div> 

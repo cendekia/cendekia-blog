@@ -1,21 +1,16 @@
 <header class="py-6 bg-dark-surface">
   <div class="container mx-auto px-4">
-    <nav class="flex justify-between items-center">
+    <div class="flex justify-between items-center">
       <a href="{{ '/' | relative_url }}" class="text-2xl font-bold text-dark-primary hover:text-dark-primary/90 transition-colors">
         {{ site.title }}
       </a>
       
       <!-- Desktop menu -->
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="{{ '/about' | relative_url }}" class="text-dark-text-secondary hover:text-dark-primary transition-colors">About</a>
-        <a href="{{ '/projects' | relative_url }}" class="text-dark-text-secondary hover:text-dark-primary transition-colors">Projects</a>
-        <a href="{{ '/blog' | relative_url }}" class="text-dark-text-secondary hover:text-dark-primary transition-colors">Blog</a>
-        <a href="{{ '/contact' | relative_url }}" class="text-dark-text-secondary hover:text-dark-primary transition-colors">Contact</a>
-      </div>
+      {% include navigation.html %}
       
       <!-- Mobile menu button -->
       {% include mobile-nav.html %}
-    </nav>
+    </div>
   </div>
 </header>
 

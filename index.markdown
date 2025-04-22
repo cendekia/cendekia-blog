@@ -7,33 +7,46 @@ title: Cendekia - A Developer's Journey
 description: Documenting the process of building projects from scratch and sharing technical insights
 ---
 
-# Welcome to Cendekia
+## Building in Public
 
-Documenting the process of building projects from scratch, sharing technical challenges, and tracking progress through a visual timeline.
+Welcome to my development journal. Here, I document the entire process of building software projects from conception to completion. Each project includes:
 
-## Featured Projects
+- A detailed timeline of development
+- Technical challenges and their solutions
+- Weekly updates on progress
+- Code snippets and explanations
 
-{% assign featured_projects = site.projects | where: "featured", true %}
-{% if featured_projects.size > 0 %}
-<div class="featured-projects">
-  {% for project in featured_projects limit:3 %}
-    <div class="project-card">
-      <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
-      <p>{{ project.description }}</p>
-      <div class="project-status {{ project.status }}">{{ site.data.statuses[project.status].label }}</div>
-    </div>
+My goal is to provide an authentic look at the software development process, sharing both successes and challenges along the way.
+
+## Development Timeline
+
+{% assign current_projects = site.projects | where: "status", "in-progress" | sort: "position" %}
+{% if current_projects.size > 0 %}
+  {% assign timeline_items = "" | split: "" %}
+  
+  {% for project in current_projects limit:1 %}
+    {% for update in project.updates %}
+      {% capture item %}
+      {
+        "date": "{{ update.date | date: '%b %d, %Y' }}",
+        "title": "{{ update.title }}",
+        "description": "{{ update.description }}",
+        "status": "{{ update.status }}",
+        "link": "{{ project.url }}#update-{{ forloop.index }}",
+        "link_text": "View details"
+      }
+      {% endcapture %}
+      
+      {% assign timeline_items = timeline_items | push: item %}
+    {% endfor %}
   {% endfor %}
-</div>
+  
+  {% include components/timeline.html 
+    title="Latest Project Updates" 
+    items=timeline_items 
+  %}
 {% else %}
-<p>No featured projects yet. Check back soon!</p>
-{% endif %}
-
-## Recent Posts
-
-{% for post in site.posts limit:5 %}
-  <div class="post-item">
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
-    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  <div class="bg-dark-surface rounded-lg p-6 my-8">
+    <p class="text-dark-text-secondary">No active projects with timeline updates. Check back soon!</p>
   </div>
-{% endfor %}
+{% endif %}

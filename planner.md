@@ -58,7 +58,7 @@
 
 ## Core Site Structure
 
-- [ ] Step 7: Create Main Navigation and Pages
+- [x] Step 7: Create Main Navigation and Pages
     
     - **Task**: Implement the main navigation menu and create skeleton pages for Home, About, Projects, and Contact.
     - **Files**:

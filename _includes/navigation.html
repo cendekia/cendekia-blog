@@ -1,0 +1,15 @@
+<nav class="site-navigation">
+  <!-- Desktop Navigation -->
+  <div class="hidden md:flex items-center space-x-6">
+    {% assign current_page = page.url | split: '/' | last %}
+    <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}text-dark-primary font-medium{% else %}text-dark-text-secondary hover:text-dark-primary{% endif %} transition-colors">Home</a>
+    
+    <a href="{{ '/about' | relative_url }}" class="{% if page.url contains 'about' %}text-dark-primary font-medium{% else %}text-dark-text-secondary hover:text-dark-primary{% endif %} transition-colors">About</a>
+    
+    <a href="{{ '/projects' | relative_url }}" class="{% if page.url contains 'projects' %}text-dark-primary font-medium{% else %}text-dark-text-secondary hover:text-dark-primary{% endif %} transition-colors">Projects</a>
+    
+    <a href="{{ '/blog' | relative_url }}" class="{% if page.url contains 'blog' %}text-dark-primary font-medium{% else %}text-dark-text-secondary hover:text-dark-primary{% endif %} transition-colors">Blog</a>
+    
+    <a href="{{ '/contact' | relative_url }}" class="{% if page.url contains 'contact' %}text-dark-primary font-medium{% else %}text-dark-text-secondary hover:text-dark-primary{% endif %} transition-colors">Contact</a>
+  </div>
+</nav> 
