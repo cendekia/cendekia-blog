@@ -14,24 +14,27 @@ description: A collection of software development projects documented from start
     </header>
     
     <!-- Projects List -->
-    <div class="project-grid">
+    <div class="max-w-7xl mx-auto">
       {% assign projects = site.projects | sort: 'position' %}
       {% if projects.size > 0 %}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {% for project in projects %}
-            {% include components/project-card.html 
-              title=project.title 
-              description=project.description 
-              status=project.status 
-              link=project.url 
-              link_text="View Project"
-              technologies=project.technologies
-              image=project.image
-            %}
+            <div class="h-full flex">
+              {% include components/project-card.html 
+                title=project.title 
+                description=project.description 
+                status=project.status 
+                link=project.url 
+                link_text="View Project"
+                technologies=project.technologies
+                image=project.image
+                class="h-full flex flex-col"
+              %}
+            </div>
           {% endfor %}
         </div>
       {% else %}
-        <div class="bg-dark-surface rounded-lg p-8 text-center">
+        <div class="bg-dark-surface rounded-lg p-8 text-center border border-dark-border">
           <p class="text-dark-text-secondary mb-4">No projects available yet. Check back soon!</p>
           
           <p class="text-dark-text-secondary text-sm">

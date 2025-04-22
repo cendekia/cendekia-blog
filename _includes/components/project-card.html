@@ -1,4 +1,4 @@
-<div class="project-card bg-dark-surface rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow {% if include.class %}{{ include.class }}{% endif %}">
+<div class="project-card bg-dark-surface rounded-lg overflow-hidden shadow-md border border-dark-border hover:shadow-lg transition-shadow w-full {% if include.class %}{{ include.class }}{% endif %}">
   <!-- Project image (if provided) -->
   {% if include.image %}
   <div class="w-full h-48 overflow-hidden">
@@ -6,16 +6,16 @@
   </div>
   {% endif %}
   
-  <div class="p-6">
+  <div class="p-6 flex-grow flex flex-col">
     <!-- Project status badge -->
     {% if include.status %}
     <div class="mb-3">
       {% if include.status == 'completed' %}
-        {% include components/badge.html text="Completed" type="secondary" %}
+        {% include components/badge.html text="Completed" type="success" %}
       {% elsif include.status == 'in-progress' %}
         {% include components/badge.html text="In Progress" type="primary" %}
       {% elsif include.status == 'planned' %}
-        {% include components/badge.html text="Planned" %}
+        {% include components/badge.html text="Planned" type="warning" %}
       {% endif %}
     </div>
     {% endif %}
@@ -33,7 +33,7 @@
     <div class="mb-4">
       <div class="flex flex-wrap gap-2">
         {% for tech in include.technologies %}
-        <span class="px-2 py-1 text-xs bg-dark-bg rounded-full text-dark-text-secondary">{{ tech }}</span>
+        <span class="px-2 py-1 text-xs bg-dark-bg rounded-full text-dark-text-secondary border border-dark-border">{{ tech }}</span>
         {% endfor %}
       </div>
     </div>
@@ -41,8 +41,8 @@
     
     <!-- Project link -->
     {% if include.link and include.link_text %}
-    <div class="mt-4">
-      <a href="{{ include.link }}" class="inline-flex items-center text-dark-primary hover:text-dark-secondary transition-colors">
+    <div class="mt-auto pt-4">
+      <a href="{{ include.link }}" class="inline-flex items-center text-dark-primary hover:opacity-80 transition-opacity">
         {{ include.link_text }}
         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

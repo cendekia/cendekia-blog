@@ -57,8 +57,10 @@
 @import "syntax";
 
 /* Custom component styles */
-.project-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+.project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-post {
