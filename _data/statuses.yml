@@ -1,18 +1,25 @@
+# Status types and their associated colors
+# Used for badges and timeline items
+
 in-progress:
-  label: In Progress
-  color: amber
+  label: "In Progress"
+  color: "primary" # uses the dark-primary color from Tailwind config
+  description: "Currently being worked on"
 
 completed:
-  label: Completed
-  color: green
+  label: "Completed"
+  color: "secondary" # uses the dark-secondary color from Tailwind config
+  description: "Finished and deployed"
 
 on-hold:
-  label: On Hold
-  color: gray
+  label: "On Hold"
+  color: "warning" # uses a warning color
+  description: "Temporarily paused"
 
 planned:
-  label: Planned
-  color: blue
+  label: "Planned"
+  color: "surface" # uses the dark-surface color from Tailwind config
+  description: "Scheduled for future development"
 
 blocked:
   label: Blocked

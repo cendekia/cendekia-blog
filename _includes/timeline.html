@@ -1,0 +1,12 @@
+<div class="timeline">
+  <ol class="relative border-l border-dark-primary/30">
+    {% for milestone in include.milestones %}
+      {% include timeline-item.html 
+        title=milestone.title 
+        date=milestone.date 
+        description=milestone.description 
+        completed=milestone.completed 
+      %}
+    {% endfor %}
+  </ol>
+</div> 

@@ -1,0 +1,83 @@
+<div class="project-summary bg-dark-surface p-6 rounded-lg mb-8">
+  <h2 class="text-xl font-bold text-dark-primary mb-4">Project Summary</h2>
+  
+  {% if include.progress %}
+  <div class="mb-6">
+    <div class="flex justify-between items-center mb-2">
+      <span class="text-sm text-dark-text-secondary">Progress</span>
+      <span class="text-sm font-medium text-dark-text-primary">{{ include.progress }}%</span>
+    </div>
+    <div class="h-2 bg-dark-bg rounded-full overflow-hidden">
+      <div class="h-full bg-dark-primary rounded-full transition-all duration-500 ease-out" style="width: {{ include.progress }}%"></div>
+    </div>
+  </div>
+  {% endif %}
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <!-- Time metrics -->
+    <div>
+      <h3 class="text-sm uppercase text-dark-text-secondary mb-2">Time</h3>
+      <ul class="space-y-2">
+        {% if include.start_date %}
+        <li class="flex justify-between">
+          <span class="text-dark-text-secondary">Started</span>
+          <span class="text-dark-text-primary">{{ include.start_date | date: "%b %d, %Y" }}</span>
+        </li>
+        {% endif %}
+        
+        {% if include.estimated_completion %}
+        <li class="flex justify-between">
+          <span class="text-dark-text-secondary">Est. Completion</span>
+          <span class="text-dark-text-primary">{{ include.estimated_completion | date: "%b %d, %Y" }}</span>
+        </li>
+        {% endif %}
+        
+        {% if include.start_date and include.estimated_completion %}
+          {% assign start = include.start_date | date: "%s" | plus: 0 %}
+          {% assign end = include.estimated_completion | date: "%s" | plus: 0 %}
+          {% assign seconds_diff = end | minus: start %}
+          {% assign days_diff = seconds_diff | divided_by: 86400 %}
+          {% if days_diff > 0 %}
+          <li class="flex justify-between">
+            <span class="text-dark-text-secondary">Duration</span>
+            <span class="text-dark-text-primary">{{ days_diff }} days</span>
+          </li>
+          {% endif %}
+        {% endif %}
+      </ul>
+    </div>
+    
+    <!-- Development metrics -->
+    <div>
+      <h3 class="text-sm uppercase text-dark-text-secondary mb-2">Development</h3>
+      <ul class="space-y-2">
+        {% if include.tasks_total and include.tasks_completed %}
+        <li class="flex justify-between">
+          <span class="text-dark-text-secondary">Tasks</span>
+          <span class="text-dark-text-primary">{{ include.tasks_completed }}/{{ include.tasks_total }}</span>
+        </li>
+        {% endif %}
+        
+        {% if include.milestones.size > 0 %}
+          {% assign completed_milestones = 0 %}
+          {% for milestone in include.milestones %}
+            {% if milestone.completed %}
+              {% assign completed_milestones = completed_milestones | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          <li class="flex justify-between">
+            <span class="text-dark-text-secondary">Milestones</span>
+            <span class="text-dark-text-primary">{{ completed_milestones }}/{{ include.milestones.size }}</span>
+          </li>
+        {% endif %}
+        
+        {% if include.commits %}
+        <li class="flex justify-between">
+          <span class="text-dark-text-secondary">Commits</span>
+          <span class="text-dark-text-primary">{{ include.commits }}</span>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div> 

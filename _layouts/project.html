@@ -2,45 +2,77 @@
 layout: default
 ---
 
-<div class="project-page">
-  <header class="project-header">
-    <h1 class="project-title">{{ page.title }}</h1>
-    <div class="project-meta">
-      <span class="project-date">Started: {{ page.start_date | date: "%B %Y" }}</span>
-      <span class="project-status {{ page.status }}">{{ site.data.statuses[page.status].label }}</span>
+<article class="project-page">
+  <!-- Project Header -->
+  {% include project-header.html 
+    title=page.title 
+    description=page.description 
+    start_date=page.start_date 
+    status=page.status 
+    technologies=page.technologies 
+    github_repo=page.github_repo 
+    live_url=page.live_url 
+  %}
+  
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Project Summary -->
+      <div class="lg:col-span-1">
+        {% include project-summary.html 
+          progress=page.progress 
+          start_date=page.start_date 
+          estimated_completion=page.estimated_completion 
+          tasks_total=page.tasks_total 
+          tasks_completed=page.tasks_completed 
+          milestones=page.milestones 
+          commits=page.commits 
+        %}
+        
+        <!-- Project Timeline -->
+        {% if page.milestones %}
+        <div class="bg-dark-surface p-6 rounded-lg mb-8">
+          <h2 class="text-xl font-bold text-dark-primary mb-4">Milestones</h2>
+          {% include timeline.html milestones=page.milestones %}
+        </div>
+        {% endif %}
+      </div>
+      
+      <!-- Project Content -->
+      <div class="lg:col-span-2">
+        <div class="bg-dark-surface p-6 rounded-lg mb-8">
+          <div class="prose prose-invert prose-dark max-w-none">
+            {{ content }}
+          </div>
+        </div>
+        
+        <!-- Project Updates -->
+        {% assign project_posts = site.posts | where_exp: "post", "post.project == page.slug" %}
+        {% if project_posts.size > 0 %}
+        <div class="bg-dark-surface p-6 rounded-lg mb-8">
+          <h2 class="text-xl font-bold text-dark-primary mb-6">Project Updates</h2>
+          <div class="space-y-6">
+            {% for post in project_posts %}
+            <div class="border-b border-dark-bg pb-6 last:border-0 last:pb-0">
+              <span class="text-sm text-dark-text-secondary">{{ post.date | date: "%b %d, %Y" }}</span>
+              <h3 class="text-lg font-bold text-dark-text-primary mt-1 mb-2">
+                <a href="{{ post.url | relative_url }}" class="hover:text-dark-primary transition-colors">{{ post.title }}</a>
+              </h3>
+              <p class="text-dark-text-secondary mb-2">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+              <a href="{{ post.url | relative_url }}" class="text-dark-primary hover:text-dark-secondary transition-colors inline-flex items-center">
+                Read more
+                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
     </div>
-    <div class="project-links">
-      {% if page.github_repo %}
-      <a href="{{ page.github_repo }}" class="project-link github-link" target="_blank">GitHub Repository</a>
-      {% endif %}
-      {% if page.live_url %}
-      <a href="{{ page.live_url }}" class="project-link live-link" target="_blank">Live Demo</a>
-      {% endif %}
-    </div>
-  </header>
-
-  <div class="project-technologies">
-    {% for tech in page.technologies %}
-      <span class="tech-badge">{{ tech }}</span>
-    {% endfor %}
   </div>
+</article>
 
-  <div class="project-content">
-    {{ content }}
-  </div>
-
-  {% assign project_posts = site.posts | where_exp: "post", "post.url contains page.title" %}
-  {% if project_posts.size > 0 %}
-  <div class="project-updates">
-    <h2>Project Updates</h2>
-    <ul class="update-list">
-      {% for post in project_posts %}
-      <li class="update-item">
-        <a href="{{ post.url }}" class="update-link">{{ post.title }}</a>
-        <span class="update-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-</div> 
+<!-- Timeline JavaScript -->
+<script src="{{ '/assets/js/timeline.js' | relative_url }}"></script> 

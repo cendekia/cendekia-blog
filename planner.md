@@ -67,7 +67,7 @@
         - `about.md`: About page
         - `projects/index.md`: Projects listing page
         - `contact.md`: Contact page
-- [ ] Step 8: Implement Homepage with Roadmap
+- [x] Step 8: Implement Homepage with Roadmap
     
     - **Task**: Design and implement the homepage with a SPA-style roadmap/timeline of projects.
     - **Files**:
@@ -86,7 +86,7 @@
 
 ## Project Pages and Timeline Implementation
 
-- [ ] Step 10: Create Project Collection and Data Structure
+- [x] Step 10: Create Project Collection and Data Structure
     
     - **Task**: Set up Jekyll collections for projects and configure the data structure for project metadata.
     - **Files**:
@@ -94,7 +94,7 @@
         - `_projects/_defaults.md`: Default front matter for projects
         - `_data/statuses.yml`: Data file for status types and colors
         - `_projects/sample-project.md`: Sample project for testing
-- [ ] Step 11: Implement Project Overview Template
+- [x] Step 11: Implement Project Overview Template
     
     - **Task**: Create the project overview page template similar to buildtwelve.com/projects/1.
     - **Files**:
@@ -102,7 +102,7 @@
         - `_includes/project-header.html`: Project header component
         - `_includes/project-summary.html`: Project summary component
         - `projects/sample-project/index.html`: Sample project page
-- [ ] Step 12: Implement Timeline Visualization Component
+- [x] Step 12: Implement Timeline Visualization Component
     
     - **Task**: Create the timeline visualization component with week-based organization and status indicators.
     - **Files**:
@@ -110,7 +110,7 @@
         - `_includes/timeline-item.html`: Timeline item component
         - `assets/css/components/timeline.scss`: Timeline specific styles
         - `assets/js/timeline.js`: Timeline interaction JavaScript
-- [ ] Step 13: Implement Status Indicators System
+- [x] Step 13: Implement Status Indicators System
     
     - **Task**: Create the color-coded status indicators system for timeline items.
     - **Files**:

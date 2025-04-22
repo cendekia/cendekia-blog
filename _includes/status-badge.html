@@ -1,0 +1,29 @@
+{% assign status_data = site.data.statuses[include.status] %}
+
+<span class="status-badge px-3 py-1 text-sm inline-flex items-center rounded-full
+  {% if status_data.color == 'primary' %}
+    bg-dark-primary text-dark-text-primary
+  {% elsif status_data.color == 'secondary' %}
+    bg-dark-secondary text-dark-bg
+  {% elsif status_data.color == 'warning' %}
+    bg-amber-500 text-dark-bg
+  {% else %}
+    bg-dark-surface text-dark-text-secondary border border-dark-primary/20
+  {% endif %}
+  {% if include.class %} {{ include.class }}{% endif %}">
+  
+  {% if include.show_icon != false %}
+    <span class="inline-block w-2 h-2 rounded-full mr-2
+      {% if status_data.color == 'primary' %}
+        bg-dark-text-primary
+      {% elsif status_data.color == 'secondary' %}
+        bg-dark-bg
+      {% elsif status_data.color == 'warning' %}
+        bg-dark-bg
+      {% else %}
+        bg-dark-text-secondary
+      {% endif %}"></span>
+  {% endif %}
+  
+  {{ status_data.label | default: include.status | capitalize }}
+</span> 

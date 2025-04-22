@@ -1,0 +1,37 @@
+<li class="mb-10 ml-6 timeline-item {% if include.completed %}completed{% else %}pending{% endif %}">
+  <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-dark-bg
+    {% if include.completed %}
+      bg-dark-secondary
+    {% else %}
+      bg-dark-surface border border-dark-primary/40
+    {% endif %}
+  ">
+    {% if include.completed %}
+      <svg class="w-3 h-3 text-dark-bg" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+      </svg>
+    {% endif %}
+  </span>
+  
+  <div class="p-4 bg-dark-surface rounded-lg shadow-sm transition-all duration-300 {% if include.completed %}opacity-100{% else %}opacity-80{% endif %}">
+    <div class="flex justify-between items-center mb-1">
+      <h3 class="text-lg font-semibold text-dark-text-primary">{{ include.title }}</h3>
+      {% if include.date %}
+        <time class="text-xs text-dark-text-secondary">{{ include.date | date: "%b %d, %Y" }}</time>
+      {% endif %}
+    </div>
+    
+    {% if include.description %}
+      <p class="text-dark-text-secondary text-sm">{{ include.description }}</p>
+    {% endif %}
+    
+    {% if include.completed and include.link %}
+      <a href="{{ include.link }}" class="inline-flex items-center text-xs text-dark-primary hover:text-dark-secondary mt-2">
+        View details
+        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    {% endif %}
+  </div>
+</li> 

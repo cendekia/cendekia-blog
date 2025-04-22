@@ -3,7 +3,12 @@ layout: project
 title: Sample Project
 description: A demonstration project to showcase the timeline and project documentation features
 start_date: 2023-01-15
+estimated_completion: 2023-03-30
 status: in-progress
+progress: 65
+tasks_total: 20
+tasks_completed: 13
+commits: 47
 technologies:
   - JavaScript
   - React
@@ -12,6 +17,27 @@ technologies:
 github_repo: https://github.com/cendekiapp/sample-project
 live_url: https://sample.cendekiapp.com
 featured: true
+milestones:
+  - title: Project Setup and Planning
+    date: 2023-01-15
+    description: Set up project repository and initial structure, defined API endpoints
+    completed: true
+  - title: Core Functionality
+    date: 2023-01-29
+    description: Implemented user authentication system and basic CRUD operations
+    completed: true
+  - title: Frontend Development
+    date: 2023-02-12
+    description: Built responsive UI components and state management
+    completed: true
+  - title: Integration and Testing
+    date: 2023-02-26
+    description: Connected frontend with backend API and wrote tests
+    completed: false
+  - title: Deployment and Launch
+    date: 2023-03-15
+    description: Deploy to production and launch public beta
+    completed: false
 ---
 
 # Sample Project
