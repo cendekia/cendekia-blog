@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<article class="post-page">
+  <div class="container mx-auto px-4 py-12">
+    <div class="max-w-4xl mx-auto">
+      <!-- Post Header -->
+      {% include post-header.html 
+        title=page.title 
+        description=page.description 
+        date=page.date 
+        author=page.author 
+        categories=page.categories 
+        post_type=page.post_type 
+        project=page.project 
+      %}
+      
+      <!-- Featured image -->
+      {% if page.image %}
+        <div class="post-featured-image mb-10">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+      {% endif %}
+      
+      <!-- Post content -->
+      <div class="post-content prose prose-invert prose-dark max-w-none">
+        {{ content }}
+      </div>
+      
+      <!-- Tags -->
+      {% if page.tags.size > 0 %}
+        <div class="post-tags mt-10 pt-6 border-t border-dark-surface">
+          <h3 class="text-sm uppercase text-dark-text-secondary mb-3">Tags</h3>
+          <div class="flex flex-wrap gap-2">
+            {% for tag in page.tags %}
+              <a href="{{ site.baseurl }}/blog/tag/{{ tag | slugify }}" class="px-3 py-1 text-sm bg-dark-surface rounded-full text-dark-text-secondary hover:text-dark-primary transition-colors">{{ tag }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      
+      <!-- Post navigation -->
+      <div class="post-navigation mt-12 pt-6 border-t border-dark-surface">
+        <div class="flex flex-col sm:flex-row justify-between">
+          {% if page.previous.url %}
+            <a href="{{ page.previous.url | relative_url }}" class="text-dark-primary hover:text-dark-secondary transition-colors mb-4 sm:mb-0">
+              <span class="block text-sm text-dark-text-secondary">Previous Post</span>
+              <span class="text-lg">{{ page.previous.title }}</span>
+            </a>
+          {% endif %}
+          
+          {% if page.next.url %}
+            <a href="{{ page.next.url | relative_url }}" class="text-dark-primary hover:text-dark-secondary transition-colors text-right">
+              <span class="block text-sm text-dark-text-secondary">Next Post</span>
+              <span class="text-lg">{{ page.next.title }}</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article> 

@@ -1,0 +1,129 @@
+---
+layout: post
+---
+
+<div class="weekly-update">
+  {% if page.project %}
+    {% assign project = site.projects | where: "slug", page.project | first %}
+    
+    {% if project %}
+      <div class="project-progress bg-dark-surface p-6 rounded-lg mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+          <h2 class="text-xl font-bold text-dark-primary mb-2 sm:mb-0">Project Progress</h2>
+          
+          {% if page.week_number %}
+            <span class="px-3 py-1 bg-dark-primary/20 rounded-md text-dark-primary font-medium">Week {{ page.week_number }}</span>
+          {% endif %}
+        </div>
+        
+        {% if page.current_progress %}
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm text-dark-text-secondary">Current Progress</span>
+              <span class="text-sm font-medium text-dark-text-primary">{{ page.current_progress }}%</span>
+            </div>
+            <div class="h-2 bg-dark-bg rounded-full overflow-hidden">
+              <div class="h-full bg-dark-primary rounded-full transition-all duration-500 ease-out" style="width: {{ page.current_progress }}%"></div>
+            </div>
+          </div>
+          
+          {% if page.previous_progress %}
+            <div class="text-sm text-dark-text-secondary flex items-center">
+              <span>Previous: {{ page.previous_progress }}%</span>
+              {% assign progress_diff = page.current_progress | minus: page.previous_progress %}
+              {% if progress_diff > 0 %}
+                <span class="ml-2 text-green-400 flex items-center">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                  </svg>
+                  +{{ progress_diff }}%
+                </span>
+              {% elsif progress_diff < 0 %}
+                <span class="ml-2 text-red-400 flex items-center">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                  </svg>
+                  {{ progress_diff }}%
+                </span>
+              {% else %}
+                <span class="ml-2 text-dark-text-secondary">No change</span>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endif %}
+  
+  <!-- Summary of accomplishments -->
+  {% if page.accomplishments %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <h2 class="text-xl font-bold text-dark-primary mb-4">This Week's Accomplishments</h2>
+      <ul class="space-y-2">
+        {% for item in page.accomplishments %}
+          <li class="flex">
+            <svg class="w-5 h-5 text-dark-secondary mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>{{ item }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  <!-- Update content -->
+  <div class="mb-8">
+    {{ content }}
+  </div>
+  
+  <!-- Challenges faced -->
+  {% if page.challenges %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <h2 class="text-xl font-bold text-dark-primary mb-4">Challenges Faced</h2>
+      <div class="space-y-4">
+        {% for challenge in page.challenges %}
+          <div class="challenge">
+            <h3 class="text-lg font-semibold text-dark-text-primary mb-2">{{ challenge.title }}</h3>
+            <p class="text-dark-text-secondary mb-2">{{ challenge.description }}</p>
+            {% if challenge.solution %}
+              <div class="mt-2 bg-dark-bg p-3 rounded-md">
+                <span class="text-sm font-medium text-dark-primary">Solution:</span>
+                <p class="text-dark-text-secondary mt-1">{{ challenge.solution }}</p>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+  
+  <!-- Next week's plan -->
+  {% if page.next_week %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <h2 class="text-xl font-bold text-dark-primary mb-4">Next Week's Plan</h2>
+      <ul class="space-y-2">
+        {% for item in page.next_week %}
+          <li class="flex">
+            <svg class="w-5 h-5 text-dark-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+            <span>{{ item }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  <!-- Link to project -->
+  {% if project %}
+    <div class="text-center mt-10">
+      <a href="{{ project.url | relative_url }}" class="inline-flex items-center bg-dark-primary hover:bg-dark-primary/90 text-dark-text-primary px-6 py-3 rounded-md transition-colors">
+        View Project Details
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  {% endif %}
+</div> 

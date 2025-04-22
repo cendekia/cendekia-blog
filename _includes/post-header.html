@@ -1,0 +1,55 @@
+<header class="post-header mb-10">
+  <!-- If post has a project link, display it -->
+  {% if include.project %}
+    {% assign project = site.projects | where: "slug", include.project | first %}
+    {% if project %}
+      <div class="mb-4">
+        <a href="{{ project.url | relative_url }}" class="inline-flex items-center text-dark-text-secondary hover:text-dark-primary transition-colors">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          Back to {{ project.title }}
+        </a>
+      </div>
+    {% endif %}
+  {% endif %}
+  
+  <!-- Post metadata -->
+  <div class="flex flex-wrap items-center text-dark-text-secondary mb-4">
+    <time datetime="{{ include.date | date_to_xmlschema }}" class="mr-4">{{ include.date | date: "%B %d, %Y" }}</time>
+    
+    {% if include.post_type %}
+      <span class="mr-4">
+        {% if include.post_type == 'project-introduction' %}
+          <span class="px-2 py-1 text-xs bg-dark-primary text-dark-text-primary rounded-full">Project Introduction</span>
+        {% elsif include.post_type == 'weekly-update' %}
+          <span class="px-2 py-1 text-xs bg-dark-secondary text-dark-bg rounded-full">Weekly Update</span>
+        {% elsif include.post_type == 'technical-challenge' %}
+          <span class="px-2 py-1 text-xs bg-amber-500 text-dark-bg rounded-full">Technical Challenge</span>
+        {% else %}
+          <span class="px-2 py-1 text-xs bg-dark-surface text-dark-text-secondary rounded-full">{{ include.post_type | capitalize }}</span>
+        {% endif %}
+      </span>
+    {% endif %}
+    
+    {% if include.author %}
+      <span class="mr-4">By {{ include.author }}</span>
+    {% endif %}
+    
+    {% if include.categories.size > 0 %}
+      <div class="w-full mt-2 md:w-auto md:mt-0">
+        {% for category in include.categories %}
+          <a href="{{ site.baseurl }}/blog/category/{{ category | slugify }}" class="px-2 py-1 text-xs bg-dark-surface rounded-full text-dark-text-secondary hover:text-dark-primary transition-colors mr-1">{{ category }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+  
+  <!-- Post title -->
+  <h1 class="text-4xl font-bold text-dark-primary mb-6">{{ include.title }}</h1>
+  
+  <!-- Post description/intro -->
+  {% if include.description %}
+    <p class="text-xl text-dark-text-secondary">{{ include.description }}</p>
+  {% endif %}
+</header> 

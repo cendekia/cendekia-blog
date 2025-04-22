@@ -1,0 +1,132 @@
+---
+layout: post
+---
+
+<div class="project-introduction">
+  {% if page.project %}
+    {% assign project = site.projects | where: "slug", page.project | first %}
+    
+    {% if project %}
+      <div class="project-overview bg-dark-surface p-6 rounded-lg mb-8">
+        <h2 class="text-xl font-bold text-dark-primary mb-4">Project Overview</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Project details -->
+          <div>
+            <h3 class="text-sm uppercase text-dark-text-secondary mb-2">Details</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between">
+                <span class="text-dark-text-secondary">Status</span>
+                <span class="text-dark-text-primary">
+                  {% assign status_data = site.data.statuses[project.status] %}
+                  {% include components/badge.html 
+                    text=status_data.label 
+                    type=status_data.color 
+                  %}
+                </span>
+              </li>
+              
+              <li class="flex justify-between">
+                <span class="text-dark-text-secondary">Started</span>
+                <span class="text-dark-text-primary">{{ project.start_date | date: "%b %d, %Y" }}</span>
+              </li>
+              
+              <li class="flex justify-between">
+                <span class="text-dark-text-secondary">Est. Completion</span>
+                <span class="text-dark-text-primary">{{ project.estimated_completion | date: "%b %d, %Y" }}</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Technologies -->
+          <div>
+            <h3 class="text-sm uppercase text-dark-text-secondary mb-2">Technologies</h3>
+            <div class="flex flex-wrap gap-2">
+              {% for tech in project.technologies %}
+                <span class="px-2 py-1 text-xs bg-dark-bg rounded-full text-dark-text-secondary">{{ tech }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-6 pt-6 border-t border-dark-bg">
+          <div class="flex flex-wrap gap-4">
+            {% if project.github_repo %}
+              <a href="{{ project.github_repo }}" class="flex items-center text-dark-text-secondary hover:text-dark-primary transition-colors" target="_blank" rel="noopener">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+                View on GitHub
+              </a>
+            {% endif %}
+            
+            {% if project.live_url %}
+              <a href="{{ project.live_url }}" class="flex items-center text-dark-text-secondary hover:text-dark-primary transition-colors" target="_blank" rel="noopener">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+                View Live Demo
+              </a>
+            {% endif %}
+            
+            <a href="{{ project.url | relative_url }}" class="flex items-center text-dark-text-secondary hover:text-dark-primary transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Project Details
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+  
+  <!-- Introduction content -->
+  <div class="mb-8">
+    {{ content }}
+  </div>
+  
+  <!-- Project goals -->
+  {% if page.goals %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <h2 class="text-xl font-bold text-dark-primary mb-4">Project Goals</h2>
+      <ul class="space-y-3">
+        {% for goal in page.goals %}
+          <li class="flex">
+            <span class="inline-flex items-center justify-center w-6 h-6 bg-dark-primary/20 rounded-full mr-3 text-dark-primary text-sm">{{ forloop.index }}</span>
+            <span>{{ goal }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  <!-- Project timeline -->
+  {% if page.timeline_preview %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold text-dark-primary">Development Timeline</h2>
+        {% if project %}
+          <a href="{{ project.url | relative_url }}#timeline" class="text-dark-primary hover:text-dark-secondary transition-colors">
+            View full timeline →
+          </a>
+        {% endif %}
+      </div>
+      
+      {% if project.milestones %}
+        <div class="timeline-preview">
+          <ol class="relative border-l border-dark-primary/30">
+            {% for milestone in project.milestones limit:3 %}
+              {% include timeline-item.html 
+                title=milestone.title 
+                date=milestone.date 
+                description=milestone.description 
+                completed=milestone.completed 
+              %}
+            {% endfor %}
+          </ol>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div> 

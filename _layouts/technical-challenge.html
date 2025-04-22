@@ -1,0 +1,110 @@
+---
+layout: post
+---
+
+<div class="technical-challenge">
+  <!-- Challenge overview -->
+  <div class="bg-dark-surface p-6 rounded-lg mb-8">
+    <h2 class="text-xl font-bold text-dark-primary mb-4">Challenge Overview</h2>
+    
+    {% if page.difficulty %}
+      <div class="mb-4">
+        <span class="text-sm font-medium text-dark-text-secondary">Difficulty:</span>
+        <span class="ml-2 px-2 py-0.5 rounded-full text-xs
+          {% if page.difficulty == 'easy' %}
+            bg-green-500/20 text-green-400
+          {% elsif page.difficulty == 'medium' %}
+            bg-amber-500/20 text-amber-400
+          {% elsif page.difficulty == 'hard' %}
+            bg-red-500/20 text-red-400
+          {% else %}
+            bg-dark-primary/20 text-dark-primary
+          {% endif %}
+        ">
+          {{ page.difficulty | capitalize }}
+        </span>
+      </div>
+    {% endif %}
+    
+    {% if page.challenge_description %}
+      <div class="mb-4">
+        <p class="text-dark-text-secondary">{{ page.challenge_description }}</p>
+      </div>
+    {% endif %}
+    
+    {% if page.topics.size > 0 %}
+      <div>
+        <span class="text-sm font-medium text-dark-text-secondary">Topics:</span>
+        <div class="mt-2 flex flex-wrap gap-2">
+          {% for topic in page.topics %}
+            <span class="px-2 py-1 text-xs bg-dark-bg rounded-full text-dark-text-secondary">{{ topic }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  
+  <!-- Main content -->
+  <div class="mb-8">
+    {{ content }}
+  </div>
+  
+  <!-- Solution -->
+  {% if page.solution %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <h2 class="text-xl font-bold text-dark-primary mb-4">Solution</h2>
+      
+      <div class="prose prose-invert prose-dark max-w-none">
+        {{ page.solution | markdownify }}
+      </div>
+    </div>
+  {% endif %}
+  
+  <!-- Code example -->
+  {% if page.code_solution %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <h2 class="text-xl font-bold text-dark-primary mb-4">Code Example</h2>
+      
+      {% include code-block.html 
+        code=page.code_solution
+        language=page.code_language
+      %}
+    </div>
+  {% endif %}
+  
+  <!-- Related challenges -->
+  {% if page.related_challenges %}
+    <div class="bg-dark-surface p-6 rounded-lg mb-8">
+      <h2 class="text-xl font-bold text-dark-primary mb-4">Related Challenges</h2>
+      
+      <ul class="space-y-4">
+        {% for challenge in page.related_challenges %}
+          <li>
+            <a href="{{ challenge.url }}" class="block p-4 bg-dark-bg rounded-lg hover:bg-dark-bg/80 transition-colors">
+              <h3 class="text-lg font-semibold text-dark-text-primary mb-1">{{ challenge.title }}</h3>
+              <p class="text-dark-text-secondary text-sm">{{ challenge.description }}</p>
+              <div class="mt-2">
+                <span class="text-dark-primary text-sm">View challenge →</span>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  <!-- Project link -->
+  {% if page.project %}
+    {% assign project = site.projects | where: "slug", page.project | first %}
+    {% if project %}
+      <div class="text-center mt-10">
+        <a href="{{ project.url | relative_url }}" class="inline-flex items-center bg-dark-primary hover:bg-dark-primary/90 text-dark-text-primary px-6 py-3 rounded-md transition-colors">
+          Back to {{ project.title }}
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+    {% endif %}
+  {% endif %}
+</div> 

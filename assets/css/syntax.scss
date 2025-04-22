@@ -1,0 +1,153 @@
+// Syntax highlighting styles for dark mode
+// Based on the "One Dark" syntax theme
+
+.highlight {
+  background: #282c34;
+  color: #abb2bf;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+
+  .c, .cm, .cp, .c1, .cs {
+    // Comments
+    color: #5c6370;
+    font-style: italic;
+  }
+
+  .err {
+    // Error
+    color: #f44747;
+  }
+
+  .k, .kc, .kd, .kn, .kp, .kr, .kt {
+    // Keywords
+    color: #c678dd;
+  }
+
+  .o, .ow {
+    // Operators
+    color: #56b6c2;
+  }
+
+  .p {
+    // Punctuation
+    color: #abb2bf;
+  }
+
+  .gd {
+    // Deleted
+    color: #e06c75;
+  }
+
+  .gi {
+    // Inserted
+    color: #98c379;
+  }
+
+  .gd .x {
+    // Deleted specific
+    color: #e06c75;
+    background-color: #4b2d36;
+  }
+
+  .gi .x {
+    // Inserted specific
+    color: #98c379;
+    background-color: #2f3d2d;
+  }
+
+  .ge {
+    // Generic emphasized
+    font-style: italic;
+  }
+
+  .gs {
+    // Generic strong
+    font-weight: bold;
+  }
+
+  .gu {
+    // Generic subheading
+    color: #3e999f;
+  }
+
+  .gt {
+    // Generic traceback
+    color: #e06c75;
+  }
+
+  .m, .mf, .mh, .mi, .mo, .il {
+    // Numbers
+    color: #d19a66;
+  }
+
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+    // Strings
+    color: #98c379;
+  }
+
+  .na, .nc, .nd, .ne, .nf, .nx {
+    // Names
+    color: #61afef;
+  }
+
+  .nb, .bp {
+    // Built-in
+    color: #e06c75;
+  }
+
+  .nl {
+    // Labels
+    color: #abb2bf;
+  }
+
+  .no, .ni, .nv, .vc, .vg, .vi {
+    // Variables
+    color: #e5c07b;
+  }
+
+  .nt {
+    // Tags
+    color: #e06c75;
+  }
+
+  .nn {
+    // Namespace
+    color: #e5c07b;
+  }
+
+  .w {
+    // Whitespace
+    color: #abb2bf;
+  }
+}
+
+// Line numbers
+.highlight .lineno {
+  color: #636d83;
+  display: inline-block;
+  padding: 0 0.5em 0 0;
+  margin-right: 0.5em;
+  border-right: 1px solid #3e4451;
+}
+
+// Code block base styles
+pre.highlight {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background-color: #282c34;
+  border-radius: 0 0 0.5rem 0.5rem;
+  overflow-x: auto;
+}
+
+// Inline code
+code.highlighter-rouge {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #282c34;
+  border-radius: 3px;
+} 
