@@ -2278,6 +2278,10 @@ hr, th, td {
   color: rgb(88 166 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-dark-primary\/80:hover {
+  color: rgb(88 166 255 / 0.8);
+}
+
 .hover\:opacity-80:hover {
   opacity: 0.8;
 }

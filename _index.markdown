@@ -72,6 +72,69 @@ description: Building in public isn't just about sharing success stories—it's 
   </div>
 </section>
 
+<!-- Development Timeline Section with full width -->
+<section class="py-10 bg-dark-surface bg-opacity-30">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary-500">Development Timeline</h2>
+
+    {% assign current_projects = site.projects | where: "status", "in-progress" | sort: "position" %}
+    {% if current_projects.size > 0 %}
+      {% assign timeline_items = "" | split: "" %}
+      
+      {% for project in current_projects limit:1 %}
+        {% for update in project.updates %}
+          {% capture item %}
+          {
+            "date": "{{ update.date | date: '%b %d, %Y' }}",
+            "title": "{{ update.title }}",
+            "description": "{{ update.description }}",
+            "status": "{{ update.status }}",
+            "link": "{{ project.url }}#update-{{ forloop.index }}",
+            "link_text": "View details"
+          }
+          {% endcapture %}
+          
+          {% assign timeline_items = timeline_items | push: item %}
+        {% endfor %}
+      {% endfor %}
+      
+      {% include components/timeline.html 
+        title="Latest Project Updates" 
+        items=timeline_items 
+      %}
+    {% else %}
+      <div class="bg-dark-surface rounded-lg p-6 my-8">
+        <p class="text-dark-text-secondary">No active projects with timeline updates. Check back soon!</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Latest Articles Section with improved grid -->
+<section class="py-10">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-500">Latest Articles</h2>
+      <a href="/blogs" class="text-primary-500 hover:text-primary-400 transition-colors">
+        View all articles →
+      </a>
+    </div>
+
+    {% assign latest_posts = site.posts | sort: "date" | reverse | limit: 3 %}
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      {% for post in latest_posts %}
+        <a href="{{ post.url }}" class="bg-dark-surface hover:bg-dark-surface-hover p-6 rounded-lg transition-colors h-full flex flex-col">
+          <p class="text-dark-text-secondary text-sm mb-2">{{ post.date | date: "%b %d, %Y" }}</p>
+          <h3 class="text-xl font-medium mb-3 text-white">{{ post.title }}</h3>
+          <p class="text-dark-text-secondary line-clamp-3 flex-grow">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          <div class="mt-4 text-primary-500">Read more →</div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- Custom stylesheet to force specific colors if Tailwind classes don't work -->
 <style>
   .text-primary-500 { color: #58A6FF !important; }

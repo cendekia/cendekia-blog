@@ -2,64 +2,60 @@
 layout: project
 title: BuildSix Platform
 description: Building a documentation platform for tracking the journey of creating 6 software projects by 2025
-start_date: 2023-01-01
-estimated_completion: 2023-06-30
+start_date: 2025-04-22
+estimated_completion: 2023-04-27
 status: in-progress
 progress: 75
 tasks_total: 28
 tasks_completed: 21
-commits: 68
+commits: 13
 technologies:
   - Jekyll
   - Tailwind CSS
   - JavaScript
   - GitHub Actions
-github_repo: https://github.com/buildsix/buildsix.com
-live_url: https://buildsix.com
+github_repo: https://github.com/cendekia/cendekia-blog
+live_url: https://cendekiapp.com
 featured: true
 position: 1
 milestones:
   - title: Project Setup and Repository Configuration
-    date: 2023-01-02
+    date: 2025-04-22
     description: Set up Jekyll with GitHub Pages and custom domain configuration
     completed: true
   - title: Design System Implementation
-    date: 2023-01-15
+    date: 2025-04-22
     description: Integration of Tailwind CSS and creation of UI components
     completed: true
   - title: Core Site Structure
-    date: 2023-01-29
+    date: 2025-04-22
     description: Implementation of main navigation and homepage with roadmap
     completed: true
   - title: Project Pages and Timeline Implementation
-    date: 2023-02-12
+    date: 2025-04-22
     description: Creation of project collection and timeline visualization
     completed: true
   - title: Blog Post System
-    date: 2023-02-26
+    date: 2025-04-22
     description: Implementation of various post templates and code highlighting
     completed: true
   - title: Advanced Features and Mobile Optimization
-    date: 2023-03-15
+    date: 2025-04-23
     description: Adding search, social sharing, and responsive design
     completed: false
 updates:
-  - date: 2023-01-02
+  - date: 2025-04-22
     title: Project Launch
     description: "Started the BuildSix Platform project with Jekyll setup and initial configuration"
     status: completed
-  - date: 2023-01-15
+  - date: 2025-04-22
     title: Design System Implementation
     description: "Integrated Tailwind CSS and created base UI components inspired by Shadcn UI"
     status: completed
-  - date: 2023-01-29
+  - date: 2025-04-22
     title: Core Structure Development
     description: "Implemented main navigation, homepage, and content structure"
     status: completed
-  - date: 2023-02-12
-    title: Technical Challenge - Authentication
-    description: "Addressed the challenge of implementing user authentication for private sections"
-    status: in-progress
 ---
 
 # BuildSix Platform
