@@ -8,7 +8,7 @@ status: in-progress
 progress: 75
 tasks_total: 28
 tasks_completed: 21
-commits: 16
+commits: 17
 technologies:
   - Jekyll
   - Tailwind CSS
@@ -77,7 +77,7 @@ This platform is Project #1 of the 6-project journey.
 
 ## Timeline
 
-Below is the development timeline showing key milestones and progress:
+Below is the development timeline showing key milestones and progress: (this is a sample timeline for showing what the timeline will look like, actual timelime in this project is only a couple of hours)
 
 ### Week 1: Project Setup and Repository Configuration
 
