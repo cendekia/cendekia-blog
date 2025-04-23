@@ -2,21 +2,37 @@
 layout: page
 title: About
 permalink: /about/
-description: Learn more about Cendekia and the purpose behind this development journal.
+description: Learn more about BuildSix and the purpose behind this development journal.
 ---
 
-## About Cendekia
+## About BuildSix
 
-Cendekia is derived from the Indonesian word for "scholar" or "intellectual" - someone dedicated to knowledge and learning. This blog serves as my digital journal for documenting the creation of various software projects from conception to completion.
+BuildSix represents my ambitious goal to build and ship 6 software applications by the end of 2025. The name encapsulates both the process (build) and the target (six projects). This blog serves as my digital journal for documenting the entire journey from conception to completion of each project.
+
+## The BuildSix Challenge
+
+The challenge is simple but ambitious:
+- Build 6 complete software applications by the end of 2025
+- Document the entire process publicly
+- Ship real, usable products that solve actual problems
+- Learn and improve with each successive project
 
 ## Purpose
 
 The primary goals of this site are:
 
 - **Document the Development Process**: Share the real journey of building software, including challenges and solutions
-- **Track Project Progress**: Visualize development timelines and milestones
+- **Track Project Progress**: Visualize development timelines and milestones across all projects
 - **Share Technical Insights**: Explain interesting technical problems and their solutions
 - **Build in Public**: Embrace transparency by sharing both successes and failures
+
+## Why Build in Public?
+
+Building in public provides several benefits:
+1. **Accountability**: Public commitment increases motivation to complete projects
+2. **Community Feedback**: Early and continuous feedback improves the final product
+3. **Knowledge Sharing**: Others can learn from both successes and mistakes
+4. **Building an Audience**: Creating in public helps build connections with like-minded developers
 
 ## About Me
 
@@ -31,7 +47,7 @@ This site is built with:
 - **GitHub Pages**: Hosting platform
 - **GitHub Actions**: CI/CD automation for deployment
 
-The source code for this site is [available on GitHub](https://github.com/cendekiapp/cendekiapp.com), so you can see exactly how it's built.
+The source code for this site is [available on GitHub](https://github.com/buildsix/buildsix.com), so you can see exactly how it's built.
 
 ## Contact
 

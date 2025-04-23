@@ -18,6 +18,7 @@ module.exports = {
       colors: {
         'dark-bg': '#0D1117',
         'dark-surface': '#161B22',
+        'dark-surface-hover': '#24292E',
         'dark-primary': '#58A6FF',
         'dark-secondary': '#58A6FF',
         'dark-success': '#3FB950',
@@ -28,6 +29,11 @@ module.exports = {
         'dark-text-disabled': 'rgba(139, 148, 158, 0.5)',
         'dark-border': '#30363D',
         'dark-code': '#1F2933',
+        'primary-500': '#58A6FF',
+        'accent-500': '#F0883E',
+        'secondary-500': '#3FB950',
+        'dark-800': '#0D1117',
+        'dark-900': '#090C10',
       },
       typography: (theme) => ({
         dark: {
