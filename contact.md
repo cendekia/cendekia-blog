@@ -42,6 +42,14 @@ I'd love to hear from you! Whether you have questions about a project, want to d
           Twitter: @{{ site.twitter_username }}
         </a>
       </li>
+      <li>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="text-dark-primary hover:text-dark-secondary flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.328 4.328 5 3.5 5S2 4.328 2 3.5 2.672 2 3.5 2s1.48.672 1.48 1.5zM2 8h3v12H2V8zm5.5 0h3v1.75h.04c.42-.8 1.44-1.64 2.96-1.64 3.16 0 3.75 2.08 3.75 4.78V20h-3v-5.5c0-1.32-.02-3-1.84-3-1.84 0-2.12 1.44-2.12 2.9V20h-3V8z"></path>
+          </svg>
+          LinkedIn: @{{ site.linkedin_username }}
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -51,7 +59,7 @@ I'd love to hear from you! Whether you have questions about a project, want to d
 Follow along with my development journey:
 
 - Subscribe to the [RSS feed](/feed.xml) to get notified of new posts
-- Star the [GitHub repository](https://github.com/cendekiapp/cendekiapp.com) to see the code behind this site
+- Star the [GitHub repository](https://github.com/cendekia/cendekia-blog) to see the code behind this site
 - Follow me on social media for updates and discussions
 
 Thank you for visiting! 

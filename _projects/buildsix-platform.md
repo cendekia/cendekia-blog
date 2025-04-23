@@ -8,7 +8,7 @@ status: in-progress
 progress: 75
 tasks_total: 28
 tasks_completed: 21
-commits: 13
+commits: 15
 technologies:
   - Jekyll
   - Tailwind CSS
