@@ -47,7 +47,7 @@ This site is built with:
 - **GitHub Pages**: Hosting platform
 - **GitHub Actions**: CI/CD automation for deployment
 
-The source code for this site is [available on GitHub](https://github.com/buildsix/buildsix.com), so you can see exactly how it's built.
+The source code for this site is [available on GitHub](https://github.com/cendekia/cendekia-blog), so you can see exactly how it's built.
 
 ## Contact
 
