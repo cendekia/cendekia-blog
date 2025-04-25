@@ -4,7 +4,7 @@ title: AutoTestify
 description: A dynamic QA checklist application with AI assistance, Slack integration, and real-time test case management
 start_date: 2025-04-26
 estimated_completion: 2025-07-26
-status: planning
+status: planned
 progress: 0
 tasks_total: 38
 tasks_completed: 0
