@@ -6,6 +6,7 @@ author: cendekia
 categories: announcement
 tags: introduction welcome
 excerpt: "Introducing BuildSix - A challenge to build 6 software projects by 2025"
+post_type: project-introduction
 ---
 
 I'm excited to launch BuildSix, a platform documenting my challenge to build and ship 6 complete software projects by the end of 2025. This site will serve as both a personal development journal and a resource for other developers interested in the challenges and solutions encountered during real-world project development.

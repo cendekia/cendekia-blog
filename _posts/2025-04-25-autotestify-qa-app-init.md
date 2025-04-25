@@ -2,9 +2,10 @@
 layout: post
 title: "Announcing AutoTestify: A New QA Automation Platform"
 date: 2025-04-25 05:00:00 +0700
+post_type: project-introduction
 author: cendekia
 categories: 
-  - Announcements
+  - announcements
   - QA
 tags:
   - test automation
