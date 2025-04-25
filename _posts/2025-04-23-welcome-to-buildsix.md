@@ -2,6 +2,7 @@
 layout: post
 title: "Welcome to BuildSix"
 date: 2025-04-23 05:00:00 +0700
+author: cendekia
 categories: announcement
 tags: introduction welcome
 excerpt: "Introducing BuildSix - A challenge to build 6 software projects by 2025"
