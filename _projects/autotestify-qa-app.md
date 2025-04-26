@@ -4,11 +4,11 @@ title: AutoTestify
 description: A dynamic QA checklist application with AI assistance, Slack integration, and real-time test case management
 start_date: 2025-04-26
 estimated_completion: 2025-07-26
-status: planned
-progress: 0
+status: in-progress
+progress: 8
 tasks_total: 38
-tasks_completed: 0
-commits: 0
+tasks_completed: 3
+commits: 6
 technologies:
   - Next.js
   - NestJS
@@ -52,11 +52,15 @@ updates:
     title: Project Planning Started
     description: "Initiated the planning phase for AutoTestify with requirements gathering and architecture design"
     status: completed
+  - date: 2025-04-26
+    title: Week 1 Progress - Project Setup Complete
+    description: "Completed initial setup of Next.js frontend, NestJS backend, and Docker configuration for PostgreSQL"
+    status: completed
 ---
 
 # AutoTestify
 
-AutoTestify is a planned dynamic QA checklist application designed to streamline the testing process through AI assistance, Slack integration, and real-time test case management. The platform will enable QA teams to collaborate effectively, automate test case generation, and provide real-time visibility into testing progress.
+AutoTestify is a dynamic QA checklist application designed to streamline the testing process through AI assistance, Slack integration, and real-time test case management. The platform will enable QA teams to collaborate effectively, automate test case generation, and provide real-time visibility into testing progress.
 
 ## Background
 
@@ -69,17 +73,29 @@ The idea for AutoTestify emerged from the challenges faced by QA teams in our or
 
 We've decided to build a solution that will address these challenges by leveraging modern technologies and integrating with the tools our teams already use. Our goal is to create a platform that makes QA testing more efficient, collaborative, and insightful.
 
+## Current Progress
+
+Development officially began on April 26, 2025. We have completed the initial project setup phase, which included:
+
+- Initializing the Next.js frontend with TypeScript and Tailwind CSS
+- Setting up the NestJS backend with TypeScript configuration
+- Creating the Docker environment for PostgreSQL
+- Configuring environment variables and port settings
+- Establishing the project structure for both repositories
+
+Check out our [Week 1 update blog post](/blogs/2025/04/26/autotestify-week1-setup/) for detailed information about our progress.
+
 ## Planned Timeline
 
-Below is our planned development timeline showing key phases and milestones:
+Below is our development timeline showing key phases and milestones:
 
 ### Phase 1: Project Setup and Configuration (Weeks 1-2: Apr 26 - May 10)
 
-- Initialize Next.js frontend project with TypeScript and Tailwind CSS
-- Set up NestJS backend project with TypeScript
-- Configure Docker environment for PostgreSQL database
-- Create initial database schema and entity models
-- Implement JWT authentication with Slack OAuth support
+- ✅ Initialize Next.js frontend project with TypeScript and Tailwind CSS
+- ✅ Set up NestJS backend project with TypeScript
+- ✅ Configure Docker environment for PostgreSQL database
+- 🔄 Create initial database schema and entity models
+- 🔄 Implement JWT authentication with Slack OAuth support
 
 ### Phase 2: Database Schema and Backend Core (Weeks 3-4: May 11 - May 24)
 
@@ -131,12 +147,11 @@ We anticipate several technical challenges in this project:
 
 ## Next Steps
 
-We are currently in the planning phase. Our immediate next steps are:
+Our immediate next steps for Week 2 are:
 
-- Finalize the implementation plan with detailed tasks
-- Set up the development environment and repository
-- Create initial project structure for both frontend and backend
-- Begin work on the database schema design
-- Research integration options for Slack, Trello, and AI services
+- Implement database schema and entity models using TypeORM
+- Create initial user authentication module with JWT support
+- Begin setting up Slack OAuth integration
+- Develop the core database entities and relationships
 
-We'll begin active development in late April 2025 and will provide regular updates on our progress through this project page. 
+We'll continue to provide weekly updates on our progress through blog posts. 
