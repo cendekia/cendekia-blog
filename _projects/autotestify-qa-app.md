@@ -5,10 +5,10 @@ description: A dynamic QA checklist application with AI assistance, Slack integr
 start_date: 2025-04-26
 estimated_completion: 2025-07-26
 status: in-progress
-progress: 8
+progress: 16
 tasks_total: 38
-tasks_completed: 3
-commits: 6
+tasks_completed: 6
+commits: 7
 technologies:
   - Next.js
   - NestJS
@@ -48,13 +48,17 @@ milestones:
     description: Build frontend pages, components, and integration with backend APIs
     completed: false
 updates:
-  - date: 2025-04-26
-    title: Project Planning Started
-    description: "Initiated the planning phase for AutoTestify with requirements gathering and architecture design"
+  - date: 2025-05-03
+    title: Week 2 Progress - Database Schema and TypeORM Integration
+    description: "Created comprehensive TypeORM entity models and set up database integration with NestJS and PostgreSQL"
     status: completed
   - date: 2025-04-26
     title: Week 1 Progress - Project Setup Complete
     description: "Completed initial setup of Next.js frontend, NestJS backend, and Docker configuration for PostgreSQL"
+    status: completed
+  - date: 2025-04-26
+    title: Project Planning Started
+    description: "Initiated the planning phase for AutoTestify with requirements gathering and architecture design"
     status: completed
 ---
 
@@ -75,15 +79,18 @@ We've decided to build a solution that will address these challenges by leveragi
 
 ## Current Progress
 
-Development officially began on April 26, 2025. We have completed the initial project setup phase, which included:
+Development officially began on April 26, 2025. So far, we have completed the following milestones:
 
 - Initializing the Next.js frontend with TypeScript and Tailwind CSS
 - Setting up the NestJS backend with TypeScript configuration
 - Creating the Docker environment for PostgreSQL
 - Configuring environment variables and port settings
 - Establishing the project structure for both repositories
+- Creating comprehensive TypeORM entity models for all system components
+- Setting up TypeORM integration with NestJS and PostgreSQL
+- Configuring database migration infrastructure
 
-Check out our [Week 1 update blog post](/blogs/2025/04/26/autotestify-week1-setup/) for detailed information about our progress.
+Check out our latest [Week 2 update blog post](/blogs/2025/05/03/autotestify-week2-entity-models/) for detailed information about our progress.
 
 ## Planned Timeline
 
@@ -94,12 +101,12 @@ Below is our development timeline showing key phases and milestones:
 - ✅ Initialize Next.js frontend project with TypeScript and Tailwind CSS
 - ✅ Set up NestJS backend project with TypeScript
 - ✅ Configure Docker environment for PostgreSQL database
-- 🔄 Create initial database schema and entity models
+- ✅ Create initial database schema and entity models
 - 🔄 Implement JWT authentication with Slack OAuth support
 
 ### Phase 2: Database Schema and Backend Core (Weeks 3-4: May 11 - May 24)
 
-- Implement user management module with CRUD operations
+- 🔄 Implement user management module with CRUD operations
 - Create project and sprint management functionality
 - Develop test case module for managing test cases
 - Set up logging module for user actions and system events
@@ -147,11 +154,10 @@ We anticipate several technical challenges in this project:
 
 ## Next Steps
 
-Our immediate next steps for Week 2 are:
+Our immediate next steps for Week 3 are:
 
-- Implement database schema and entity models using TypeORM
-- Create initial user authentication module with JWT support
-- Begin setting up Slack OAuth integration
-- Develop the core database entities and relationships
+- Implement user authentication module with JWT support
+- Begin Slack OAuth integration setup
+- Start development of the user management module with CRUD operations
 
 We'll continue to provide weekly updates on our progress through blog posts. 
