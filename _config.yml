@@ -28,6 +28,7 @@ url: "https://cendekiapp.com" # the base hostname & protocol for your site, e.g.
 twitter_username: cendekiapp
 github_username: cendekia
 linkedin_username: cendekiapp
+timezone: Asia/Jakarta
 
 # Build settings
 theme: minima

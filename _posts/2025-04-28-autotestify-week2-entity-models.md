@@ -2,7 +2,7 @@
 layout: weekly-update
 title: "AutoTestify Week 2: Database Schema and TypeORM Integration"
 description: "Second development update for AutoTestify QA App covering the creation of TypeORM entity models and database integration setup"
-date: 2025-04-28 06:40:00 +0800
+date: 2025-04-28
 author: Cendekia
 categories: [development, project-update]
 tags: [nestjs, typescript, typeorm, postgresql, database-design]
