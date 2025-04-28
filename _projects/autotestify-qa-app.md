@@ -48,7 +48,7 @@ milestones:
     description: Build frontend pages, components, and integration with backend APIs
     completed: false
 updates:
-  - date: 2025-05-03
+  - date: 2025-04-28
     title: Week 2 Progress - Database Schema and TypeORM Integration
     description: "Created comprehensive TypeORM entity models and set up database integration with NestJS and PostgreSQL"
     status: completed
@@ -90,7 +90,7 @@ Development officially began on April 26, 2025. So far, we have completed the fo
 - Setting up TypeORM integration with NestJS and PostgreSQL
 - Configuring database migration infrastructure
 
-Check out our latest [Week 2 update blog post](/blogs/2025/05/03/autotestify-week2-entity-models/) for detailed information about our progress.
+Check out our latest [Week 2 update blog post](/blogs/2025/04/28/autotestify-week2-entity-models/) for detailed information about our progress.
 
 ## Planned Timeline
 

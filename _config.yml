@@ -36,6 +36,20 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Syntax highlighting settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
 # Collections
 collections:
   projects:

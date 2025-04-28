@@ -1,0 +1,193 @@
+/* Syntax highlighting styles for dark mode
+   Based on GitHub dark theme */
+
+.highlight {
+  background: #1F2933;
+  color: #C9D1D9;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid #30363D;
+}
+
+/* Comments */
+.highlight .c, 
+.highlight .cm, 
+.highlight .cp, 
+.highlight .c1, 
+.highlight .cs {
+  color: #8B949E;
+  font-style: italic;
+}
+
+/* Error */
+.highlight .err {
+  color: #F85149;
+}
+
+/* Keywords */
+.highlight .k, 
+.highlight .kc, 
+.highlight .kd, 
+.highlight .kn, 
+.highlight .kp, 
+.highlight .kr, 
+.highlight .kt {
+  color: #FF7B72;
+}
+
+/* Operators */
+.highlight .o, 
+.highlight .ow {
+  color: #79C0FF;
+}
+
+/* Punctuation */
+.highlight .p {
+  color: #C9D1D9;
+}
+
+/* Deleted */
+.highlight .gd {
+  color: #F85149;
+}
+
+/* Inserted */
+.highlight .gi {
+  color: #3FB950;
+}
+
+/* Deleted specific */
+.highlight .gd .x {
+  color: #F85149;
+  background-color: #4a2426;
+}
+
+/* Inserted specific */
+.highlight .gi .x {
+  color: #3FB950;
+  background-color: #2a3b2d;
+}
+
+/* Generic emphasized */
+.highlight .ge {
+  font-style: italic;
+}
+
+/* Generic strong */
+.highlight .gs {
+  font-weight: bold;
+}
+
+/* Generic subheading */
+.highlight .gu {
+  color: #58A6FF;
+}
+
+/* Generic traceback */
+.highlight .gt {
+  color: #F85149;
+}
+
+/* Numbers */
+.highlight .m, 
+.highlight .mf, 
+.highlight .mh, 
+.highlight .mi, 
+.highlight .mo, 
+.highlight .il {
+  color: #79C0FF;
+}
+
+/* Strings */
+.highlight .s, 
+.highlight .sb, 
+.highlight .sc, 
+.highlight .sd, 
+.highlight .s2, 
+.highlight .se, 
+.highlight .sh, 
+.highlight .si, 
+.highlight .sx, 
+.highlight .sr, 
+.highlight .s1, 
+.highlight .ss {
+  color: #A5D6FF;
+}
+
+/* Names */
+.highlight .na, 
+.highlight .nc, 
+.highlight .nd, 
+.highlight .ne, 
+.highlight .nf, 
+.highlight .nx {
+  color: #58A6FF;
+}
+
+/* Built-in */
+.highlight .nb, 
+.highlight .bp {
+  color: #FF7B72;
+}
+
+/* Labels */
+.highlight .nl {
+  color: #C9D1D9;
+}
+
+/* Variables */
+.highlight .no, 
+.highlight .ni, 
+.highlight .nv, 
+.highlight .vc, 
+.highlight .vg, 
+.highlight .vi {
+  color: #FFA657;
+}
+
+/* Tags */
+.highlight .nt {
+  color: #7EE787;
+}
+
+/* Namespace */
+.highlight .nn {
+  color: #FFA657;
+}
+
+/* Whitespace */
+.highlight .w {
+  color: #C9D1D9;
+}
+
+/* Line numbers */
+.highlight .lineno {
+  color: #8B949E;
+  display: inline-block;
+  padding: 0 0.5em 0 0;
+  margin-right: 0.5em;
+  border-right: 1px solid #30363D;
+}
+
+/* Code block base styles */
+pre.highlight {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background-color: #1F2933;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #30363D;
+}
+
+/* Inline code */
+code.highlighter-rouge {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #1F2933;
+  border-radius: 3px;
+} 
