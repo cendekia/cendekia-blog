@@ -5,10 +5,10 @@ description: A dynamic QA checklist application with AI assistance, Slack integr
 start_date: 2025-04-26
 estimated_completion: 2025-07-26
 status: in-progress
-progress: 32
+progress: 35
 tasks_total: 38
-tasks_completed: 12
-commits: 15
+tasks_completed: 13
+commits: 17
 technologies:
   - Next.js
   - NestJS
@@ -48,6 +48,10 @@ milestones:
     description: Build frontend pages, components, and integration with backend APIs
     completed: false
 updates:
+  - date: 2025-05-07
+    title: Week 3 Progress - Project and Sprint Management Implementation
+    description: "Implemented project and sprint management module with CRUD operations, validation, and API endpoints for organizing test cases"
+    status: completed
   - date: 2025-05-05
     title: Week 3 Progress - User Management Implementation
     description: "Implemented comprehensive user management module with CRUD operations, secure password handling, and validation features"
@@ -103,8 +107,11 @@ Development officially began on April 26, 2025. So far, we have completed the fo
 - Implementing user management module with CRUD operations
 - Setting up validation for user data with proper error handling
 - Creating secure password handling with bcrypt hashing
+- Implementing project and sprint management module
+- Creating DTOs for project and sprint operations with validation
+- Developing REST API endpoints for projects and sprints
 
-Check out our latest [Week 3 update blog post](/blogs/2025/05/05/autotestify-week3-user-management/) for detailed information about our progress.
+Check out our latest [Week 3 update blog post](/blogs/2025/05/07/autotestify-week3-project-sprint-management/) for detailed information about our progress.
 
 ## Planned Timeline
 
@@ -121,8 +128,8 @@ Below is our development timeline showing key phases and milestones:
 ### Phase 2: Database Schema and Backend Core (Weeks 3-4: May 11 - May 24)
 
 - ✅ Implement user management module with CRUD operations
-- 🔄 Create project and sprint management functionality
-- Develop test case module for managing test cases
+- ✅ Create project and sprint management functionality
+- 🔄 Develop test case module for managing test cases
 - Set up logging module for user actions and system events
 
 ### Phase 3: Integration Services (Weeks 5-6: May 25 - Jun 7)
@@ -170,9 +177,9 @@ We anticipate several technical challenges in this project:
 
 Our immediate next steps for Week 4 are:
 
-- Implement role-based access control (RBAC) system
-- Create user profile management endpoints
-- Set up email verification system
-- Begin work on project and sprint management functionality
+- Implement test case management module
+- Create test suite relationship structure
+- Develop test result tracking system
+- Set up test history and versioning
 
 We'll continue to provide weekly updates on our progress through blog posts. 
