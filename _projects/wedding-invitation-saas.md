@@ -20,8 +20,8 @@ technologies:
   - Firestore
   - Vercel
   - React Hooks
-github_repo: https://github.com/username/wedding-invitation-saas
-live_url: https://wedding-invitation-saas.vercel.app
+github_repo: https://github.com/cendekia/wedding-invitation
+live_url: https://fulana-fulan.cendekiapp.space/
 featured: true
 position: 2
 milestones:
