@@ -39,6 +39,22 @@ next_steps:
 
 The wedding invitation SaaS platform now features a comprehensive bulk import system that allows administrators to efficiently import guest lists from Excel files. This implementation prioritizes data integrity, user experience, and robust error handling while maintaining flexibility for various data formats.
 
+### 🎥 Video Demo
+
+Watch the bulk import feature in action:
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+  <iframe 
+    src="https://www.youtube.com/embed/i0LdIBk90Fo" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+*Complete walkthrough of the Excel bulk import feature, including file upload, validation preview, and import process.*
+
 ### Key Features Implemented
 
 #### 📁 Excel File Upload & Parsing
