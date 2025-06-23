@@ -7,8 +7,8 @@ title: BuildSix - A Developer's Journey
 description: Building in public isn't just about sharing success stories—it's about documenting the entire journey, including the challenges, pivots, and breakthrough moments that shape each project.
 ---
 
-<!-- Hero Section -->
-<section class="pt-4 pb-12">
+<!-- Hero Section - Hidden for WhatsApp validation -->
+<section class="pt-4 pb-12" style="display: none;">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
       <!-- Left side content -->
@@ -46,8 +46,8 @@ description: Building in public isn't just about sharing success stories—it's 
         <!-- Call to action button using the button component -->
         <div class="fade-in mt-8">
           {% include components/link-button.html 
-            href="/projects" 
-            text="View My Projects" 
+            href="/projects/wedding-invitation-saas" 
+            text="View Detail" 
             icon_after=true 
           %}
         </div>
@@ -65,6 +65,69 @@ description: Building in public isn't just about sharing success stories—it's 
             fellow builder, aspiring creator, or simply curious about SaaS
             development, these updates will provide practical insights you
             can apply to your own projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp Business Verification Section - Now visible as main hero -->
+<section class="pt-4 pb-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Left side content -->
+      <div class="lg:col-span-7">
+        <!-- Main title with blue gradient -->
+        <h1 class="text-4xl md:text-7xl font-bold text-primary-500 mb-4 fade-in">Undang Digital</h1>
+        
+        <!-- Description with secondary text color -->
+        <p class="text-xl text-dark-text-secondary mb-6 fade-in">
+          An innovative platform for creating elegant and interactive digital invitations with advanced customization features.
+        </p>
+        
+        <!-- Main statement with specific text colors -->
+        <div class="text-2xl md:text-4xl font-bold mb-10 mt-8 leading-tight">
+          <!-- Main verification statement -->
+          <div class="mb-1 text-accent-500">
+            Undang Digital
+          </div>
+          
+          <!-- Second line with "product" in green -->
+          <div class="flex flex-wrap items-baseline">
+            <span class="text-white mr-2">is a premium</span>
+            <span class="text-secondary-500 mr-2">product</span>
+            <span class="text-white">from</span>
+          </div>
+          
+          <!-- Third line with "shopglobalsite" in blue -->
+          <div class="flex flex-wrap items-baseline">
+            <span class="text-primary-500 mr-2">shopglobalsite</span>
+            <span class="text-white">platform.</span>
+          </div>
+        </div>
+
+        <!-- Call to action button using the button component -->
+        <div class="fade-in mt-8">
+          {% include components/link-button.html 
+            href="/projects/wedding-invitation-saas" 
+            text="View Detail" 
+            icon_after=true 
+          %}
+        </div>
+      </div>
+      
+      <!-- Right side content -->
+      <div class="lg:col-span-5">
+        <!-- Product description paragraph with left border accent in a card -->
+        <div class="bg-dark-surface rounded-lg p-6 border-l-4 border-primary-500 mt-4">
+          <p class="text-lg md:text-xl text-dark-text-secondary">
+            Undang Digital provides a comprehensive solution for creating 
+            beautiful digital wedding invitations. Built with modern web 
+            technologies, it offers seamless user experience, customizable 
+            templates, and responsive design that works perfectly across 
+            all devices. This platform represents the next generation of 
+            digital invitation services.
           </p>
         </div>
       </div>
